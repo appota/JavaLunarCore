@@ -3,7 +3,9 @@
 [![Language](https://img.shields.io/badge/language-java-orange.svg)](https://developer.android.com/guide/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/appota/JavaLunarCore/blob/master/LICENSE)
 
-LunarCore for Android is a library to help you convert between the Gregorian Calendar (or the Western Solar Calendar) and the Lunar Calendar (or the Traditional Chinese/Vietnamese Calendar).
+JavaLunarCore is a library for Android to help you convert between the Gregorian Calendar (or the Western Solar Calendar) and the Lunar Calendar (or the Traditional Chinese/Vietnamese Calendar). The library does not contain any UI implemetation.
+
+# Lịch Như Ý
 This library is used in [Lịch
  Như Ý](https://play.google.com/store/apps/details?id=com.material.lichnhuy) by Appota.
  
