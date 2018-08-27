@@ -1,5 +1,5 @@
 # JavaLunarCore 
-[![GitHub release](https://img.shields.io/badge/JitPack-v1.0-green.svg)](https://github.com/appota/JavaLunarCore/releases/)
+[![JitPack release](https://img.shields.io/badge/JitPack-v1.0-green.svg)](https://github.com/appota/JavaLunarCore/releases/)
 [![Language](https://img.shields.io/badge/language-java-orange.svg)](https://developer.android.com/guide/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/appota/JavaLunarCore/blob/master/LICENSE)
 
@@ -27,7 +27,7 @@ allprojects {
 ```
 
 Add the dependency in your app's `build.gradle`
-The `latestVersion` is  [![GitHub release](https://img.shields.io/badge/version-v1.0-green.svg)](https://github.com/appota/JavaLunarCore/releases/)
+The `latestVersion` is  [![JitPack release](https://img.shields.io/badge/JitPack-v1.0-green.svg)](https://github.com/appota/JavaLunarCore/releases/)
 ```
 dependencies {
   implementation 'com.github.appota:JavaLunarCore:${latestVersion}'
