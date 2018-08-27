@@ -7,7 +7,7 @@ JavaLunarCore is a library for Android to help you convert between the Gregorian
 
 # Lịch Như Ý
 This library is used in [Lịch
- Như Ý](https://play.google.com/store/apps/details?id=com.material.lichnhuy) by Appota.
+ Như Ý](https://play.google.com/store/apps/details?id=com.material.lichnhuy) by Appota. The app was in Top 10 - Productiviy on Google Play multiple times.
  
   <p align="center"> 
     <img src="https://lh3.ggpht.com/OJqe8eU5repOIZZ-fVpT1pqPlYlaUi_mwvqNRWINKUZLyu1dvI2wEbzbFMuEqioEwPU=w1280-h665-rw" alt="Image of Lịch Như Ý">
