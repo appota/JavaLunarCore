@@ -1,4 +1,7 @@
-# JavaLunarCore [![GitHub release](https://img.shields.io/badge/version-v1.0-green.svg)](https://github.com/appota/JavaLunarCore/releases/)
+# JavaLunarCore 
+[![GitHub release](https://img.shields.io/badge/JitPack-v1.0-green.svg)](https://github.com/appota/JavaLunarCore/releases/)
+[![Language](https://img.shields.io/badge/language-java-orange.svg)](https://developer.android.com/guide/)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/appota/JavaLunarCore/blob/master/LICENSE)
 
 LunarCore for Android is a library to help you convert between the Gregorian Calendar (or the Western Solar Calendar) and the Lunar Calendar (or the Traditional Chinese/Vietnamese Calendar).
 This library is used in [Lịch
