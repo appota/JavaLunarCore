@@ -3,7 +3,7 @@
 [![Language](https://img.shields.io/badge/language-java-orange.svg)](https://developer.android.com/guide/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/appota/JavaLunarCore/blob/master/LICENSE)
 
-JavaLunarCore is the core library of Lunar calendar in Android devices. The library does not contain any UI implementation only Lunar date conversion and Good/Bad/Normal day calculation.
+JavaLunarCore is the core library of Lunar calendar in Android devices. The library does not contain any UI implementation only Lunar date conversion and Good/Bad/Normal day calculation in file [LunarCoreHelper.java](https://github.com/appota/JavaLunarCore/blob/master/lunarcore/src/main/java/com/appota/lunarcore/LunarCoreHelper.java).
 
 # Lịch Như Ý
 This library is used in [Lịch
