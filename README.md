@@ -1,9 +1,9 @@
 # JavaLunarCore 
-[![JitPack release](https://img.shields.io/badge/JitPack-v1.0-green.svg)](https://github.com/appota/JavaLunarCore/releases/)
+[![JitPack release](https://img.shields.io/badge/JitPack-1.0.2-green.svg)](https://github.com/appota/JavaLunarCore/releases/)
 [![Language](https://img.shields.io/badge/language-java-orange.svg)](https://developer.android.com/guide/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/appota/JavaLunarCore/blob/master/LICENSE)
 
-JavaLunarCore is a library for Android to help you convert between the Gregorian Calendar (or the Western Solar Calendar) and the Lunar Calendar (or the Traditional Chinese/Vietnamese Calendar). The library does not contain any UI implemetation.
+JavaLunarCore is the core library of lunar calendar in Android devices. The library does not contain any UI implemetation.
 
 # Lịch Như Ý
 This library is used in [Lịch
@@ -29,7 +29,7 @@ allprojects {
 ```
 
 Add the dependency in your app's `build.gradle`
-The `latestVersion` is  [![JitPack release](https://img.shields.io/badge/JitPack-v1.0-green.svg)](https://github.com/appota/JavaLunarCore/releases/)
+The `latestVersion` is  [![JitPack release](https://img.shields.io/badge/JitPack-1.0.2-green.svg)](https://github.com/appota/JavaLunarCore/releases/)
 ```
 dependencies {
   implementation 'com.github.appota:JavaLunarCore:${latestVersion}'
@@ -37,6 +37,8 @@ dependencies {
 ```
 
 ## Usage
+
+Convert between the Gregorian Calendar (or the Western Solar Calendar) and the Lunar Calendar (or the Traditional Chinese/Vietnamese Calendar)
 
 ```java
 int[] lunarDay = LunarCoreHelper.convertSolar2Lunar(day, month, year, timeZone);
@@ -52,4 +54,22 @@ Log.d(TAG, "Solar date:\n" +
            "Day: " + solarDay[0] + "\n" +
            "Month: " + solarDay[1] + "\n" +
            "Year: " + solarDay[2] + "\n");
+```
+
+
+Get Can-Chi (Stem-Branch) of a day based on [Sexagenary cycle](https://en.wikipedia.org/wiki/Sexagenary_cycle)
+
+```java
+Log.d(TAG, "Can Chi: " + LunarCoreHelper.getCanDayLunar(solarDay, solarMonth, solarYear) + " " 
+                       + LunarCoreHelper.getChiDayLunar(solarDay, solarMonth, solarYear) + "\n" +
+           "Chinese 干支: " + LunarCoreHelper.getChineseCanDayLunar(solarDay, solarMonth, solarYear) 
+                           + LunarCoreHelper.getChineseChiDayLunar(solarDay, solarMonth, solarYear));
+```
+
+
+Get day rating (Good/Bay/Normal Day)
+
+```java
+String chiDay = LunarCoreHelper.getChiDayLunar(solarDay, solarMonth, solarYear);
+Log.d(TAG, "Good/Bad Day: " + LunarCoreHelper.rateDay(chiDay, lunarMonth));
 ```
