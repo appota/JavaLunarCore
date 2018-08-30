@@ -15,26 +15,27 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        lunarCoreTest();
+        lunarCoreTest(2, 5, 1992, 1, 7.00);
+        lunarCoreTest(29, 2, 1996, 1, 7.00);
+        lunarCoreTest(1, 3, 1996, 1, 7.00);
+        lunarCoreTest(2, 5, 1997, 1, 7.00);
+        lunarCoreTest(2, 5, 2016, 1, 7.00);
     }
 
-    private void lunarCoreTest(){
-        int day = 1, month = 1, year = 2018;
-        int lunarLeapMonth = 1;
-        double timeZone = 7.00;
+    private void lunarCoreTest(int day, int month, int year, int lunarLeapMonth, double timeZone){
 
-        int[] lunarDay = LunarCoreHelper.convertSolar2Lunar(day,month,year,timeZone);
-        Log.d(TAG, "Lunar date:\n" +
-                "Day: " + lunarDay[0] + "\n" +
-                "Month: " + lunarDay[1] + "\n" +
-                "Year: " + lunarDay[2] + "\n" +
-                "Leap Month: " + (lunarDay[3]==1 ? "Yes" : "No"));
+        int[] lunarDay = LunarCoreHelper.convertSolar2Lunar(day, month, year, timeZone);
+        Log.d(TAG, "Lunar date (dd/mm/yyyy): " + lunarDay[0] + "/" + lunarDay[1] + "/" + lunarDay[2] + "\n" +
+                "Leap Month: " + (lunarDay[3]==1 ? "Yes" : "No") + "\n" +
+                "Can Chi: " + LunarCoreHelper.getCanDayLunar(day, month, year) + " " + LunarCoreHelper.getChiDayLunar(day, month, year) + "\n" +
+                "Chinese 干支: " + LunarCoreHelper.getChineseCanDayLunar(day, month, year) + LunarCoreHelper.getChineseChiDayLunar(day, month, year) + "\n" +
+                "Good/Bad Day: " + LunarCoreHelper.rateDay(LunarCoreHelper.getChiDayLunar(day, month, year), lunarDay[1]));
 
 
-        int[] solarDay = LunarCoreHelper.convertLunar2Solar(day,month,year, lunarLeapMonth,timeZone);
-        Log.d(TAG, "Solar date:\n" +
-                "Day: " + solarDay[0] + "\n" +
-                "Month: " + solarDay[1] + "\n" +
-                "Year: " + solarDay[2] + "\n");
+        int[] solarDay = LunarCoreHelper.convertLunar2Solar(day, month, year, lunarLeapMonth, timeZone);
+        Log.d(TAG, "Solar date (dd/mm/yyyy): " + solarDay[0] + "/" + solarDay[1] + "/" + solarDay[2] + "\n" +
+                "Can Chi: " + LunarCoreHelper.getCanDayLunar(solarDay[0],solarDay[1],solarDay[2]) + " " + LunarCoreHelper.getChiDayLunar(solarDay[0],solarDay[1],solarDay[2]) + "\n" +
+                "Chinese 干支: " + LunarCoreHelper.getChineseCanDayLunar(solarDay[0],solarDay[1],solarDay[2]) + LunarCoreHelper.getChineseChiDayLunar(solarDay[0],solarDay[1],solarDay[2]) + "\n" +
+                "Good/Bad Day: " + LunarCoreHelper.rateDay(LunarCoreHelper.getChiDayLunar(solarDay[0],solarDay[1],solarDay[2]), month));
     }
 }
