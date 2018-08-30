@@ -3,7 +3,7 @@
 [![Language](https://img.shields.io/badge/language-java-orange.svg)](https://developer.android.com/guide/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/appota/JavaLunarCore/blob/master/LICENSE)
 
-JavaLunarCore is the core library of lunar calendar in Android devices. The library does not contain any UI implemetation.
+JavaLunarCore is the core library of lunar calendar in Android devices. The library does not contain any UI implemetation only Lunar date conversion and Good/Bad/Normal day calculation.
 
 # Lịch Như Ý
 This library is used in [Lịch
@@ -67,7 +67,7 @@ Log.d(TAG, "Can Chi: " + LunarCoreHelper.getCanDayLunar(solarDay, solarMonth, so
 ```
 
 
-Get day rating (Good/Bay/Normal Day)
+Get day rating (Good/Bad/Normal Day)
 
 ```java
 String chiDay = LunarCoreHelper.getChiDayLunar(solarDay, solarMonth, solarYear);
